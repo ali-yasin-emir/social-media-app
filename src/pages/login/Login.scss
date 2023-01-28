@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #606c88;
+  --button-light: #ad5389;
+  --button-dark: #3c1053;
+}
+
+.login {
+  height: 100vh;
+  background-color: #606c88;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    width: 50%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+    box-shadow: rgba(49, 49, 49, 0.35) 0px 5px 15px;
+    .left {
+      flex: 1;
+      background: linear-gradient(to right, #212c4781, #3f4c6b85),
+        url('https://i.hizliresim.com/2gatr4e.png') center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      p {
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: var(--button-dark);
+        // font-family: Helvetica;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        cursor: pointer;
+      }
+    }
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      // background-color: plum;
+      h1 {
+        color: #555;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+        }
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: var(--button-light);
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
