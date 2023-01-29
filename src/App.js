@@ -13,7 +13,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
 
   const Layout = () => {
     return (
@@ -21,7 +21,9 @@ function App() {
         <Navbar />
         <div style={{ display: 'flex' }}>
           <Leftbar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
           <Rightbar />
         </div>
       </div>
