@@ -1,11 +1,94 @@
+@import '../../style.scss';
+
 .rightbar {
-  display: flex;
-  flex: 3;
-  position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
+  @include themify($themes) {
+    display: flex;
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    background-color: themed('bgSoft');
+
+    .container {
+      width: 100%;
+      padding: 20px;
+
+      .item {
+        background-color: themed('bg');
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        span {
+          color: gray;
+          // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          padding: 10px 0px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px 0px;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .online {
+              position: absolute;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: limegreen;
+              top: 3px;
+              left: 30px;
+            }
+
+            p {
+              color: themed('textColorSoft');
+            }
+
+            span {
+              font-weight: 500;
+              color: black;
+              color: themed('textColor');
+            }
+          }
+
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+              border: none;
+              padding: 5px;
+              cursor: pointer;
+              color: white;
+
+              &:first-child {
+                background-color: #5271ff;
+              }
+              &:last-child {
+                background-color: #f0544f;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
