@@ -8,6 +8,10 @@
     height: calc(100vh - 70px);
     overflow: scroll;
     padding: 0px 40px 0px 0px;
+
+    @include mobile {
+      display: none;
+    }
     &::-webkit-scrollbar {
       display: none;
     }
